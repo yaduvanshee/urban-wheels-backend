@@ -1,24 +1,68 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## How to Start the Project
 
-Things you may want to cover:
+### 1️⃣ Normal (Local Machine) Setup
 
-* Ruby version
+**Requirements:**
+- Ruby 3.2.2
+- Rails 7.x
+- PostgreSQL@16
 
-* System dependencies
+**Steps:**
 
-* Configuration
+```sh
+git clone git@github.com:yaduvanshee/urban-wheels-backend.git
+cd urban-wheels-backend
+```
 
-* Database creation
+```sh
+bundle install
+```
 
-* Database initialization
+```sh
+rails db:create db:migrate db:seed
+```
 
-* How to run the test suite
+```sh
+rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+App will be available at: [http://localhost:3000](http://localhost:3000)
 
-* Deployment instructions
+---
 
-* ...
+### 2️⃣ Docker Setup
+
+**Requirements:**
+- Docker
+- Docker Compose
+
+**Steps:**
+
+```sh
+git clone git@github.com:yaduvanshee/urban-wheels-backend.git
+cd urban-wheels-backend
+```
+
+```sh
+docker-compose up --build
+```
+
+App will be available at: [http://localhost:3000](http://localhost:3000)
+
+---
+
+### 🔧 Useful Docker Commands
+
+```sh
+docker-compose exec web rails console
+```
+
+```sh
+docker-compose exec web rails db:migrate
+```
+
+```sh
+docker-compose restart web
+```
